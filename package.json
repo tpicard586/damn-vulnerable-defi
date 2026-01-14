@@ -9,7 +9,9 @@
     "selfie": "npm run compile && npx mocha --timeout 5000 --exit test/selfie/selfie.challenge.js",
     "compromised": "npm run compile && npx mocha --timeout 5000 --exit test/compromised/compromised.challenge.js",
     "puppet": "npm run compile && npx mocha --timeout 5000 --exit test/puppet/puppet.challenge.js",
-    "compile": "npx buidler compile"
+    "compile": "npx buidler compile",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "license": "MIT",
   "dependencies": {
@@ -17,6 +19,8 @@
     "@openzeppelin/contracts": "3.0.0",
     "@openzeppelin/test-environment": "0.1.3",
     "@openzeppelin/test-helpers": "0.5.5",
-    "mocha": "7.1.1"
-  }
+    "mocha": "7.1.1",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
